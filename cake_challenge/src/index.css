@@ -16,6 +16,10 @@ body {
   width: 150px;
 }
 
+.cake-name{
+  text-align: center;
+}
+
 .cake-div{
   width: 150px;
   border: 2px;
