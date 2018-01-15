@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Cake from './Cake'
+import SubmitBtn from './SubmitBtn'
 
 class CakeList extends Component {
   constructor(props){
@@ -37,7 +38,7 @@ class CakeList extends Component {
       return(<Cake cake={cake}/>)
     }))
 
-    return <div id="cakes-div">{cakes}</div>
+    return <div id="cakes-div">{cakes}<SubmitBtn/></div>
   }
 }
 
