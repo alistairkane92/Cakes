@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Cake from './Cake'
 
 class CakeList extends Component {
   constructor(props){
@@ -33,14 +34,8 @@ class CakeList extends Component {
     }
 
     const cakes = (this.state.cakes.map((cake, index) => {
-      return(
-        <div>
-          <img className="cake-img" key={index} value={index} src={cake.imageUrl} alt="cake-image"/>
-          <h3 className="cake-name">{cake.name}</h3>
-        </div>
-        )
-      })
-    )
+      return(<Cake cake={cake}/>)
+    }))
 
     return <div id="cakes-div">{cakes}</div>
   }
