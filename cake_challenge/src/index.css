@@ -3,3 +3,21 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+#cakes-div {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 30px 20px 10px 10px;
+}
+
+.cake-img{
+  height: 100px;
+  width: 150px;
+}
+
+.cake-div{
+  width: 150px;
+  border: 2px;
+  border-style: solid;
+}
