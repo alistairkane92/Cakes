@@ -1,17 +1,15 @@
 import React, {Component} from 'react'
+import { redirect } from 'react-router-dom'
 
 class CakeSubmit extends Component {
   constructor () {
     super();
-    this.state = {
-      redirect: false
-    }
   }
 
   handleSubmit(event){
     event.preventDefault();
 
-    let url = "http://ec2-52-209-201-89.eu-west-1.compute.amazonaws.com:5000/api/cakes"
+    // let url = "http://ec2-52-209-201-89.eu-west-1.compute.amazonaws.com:5000/api/cakes"
     let payload = {
       name: this.refs.name.value,
       comment: this.refs.comment.value,
@@ -19,17 +17,15 @@ class CakeSubmit extends Component {
       yumFactor: this.refs.yumFactor.value
     }
 
-    fetch(url, {
-      method: 'POST',
-      body: JSON.stringify(payload),
-      headers: new Headers({
-        'Content-Type': 'application/json'
-      })
-    }).then(res => res.json())
-    .catch(error => console.error('Error:', error))
-    .then(response => console.log('Success:', response));
-
-    this.setState({ redirect: true})
+    // fetch(url, {
+    //   method: 'POST',
+    //   body: JSON.stringify(payload),
+    //   headers: new Headers({
+    //     'Content-Type': 'application/json'
+    //   })
+    // }).then(res => res.json())
+    // .catch(error => console.error('Error:', error))
+    // .then(response => console.log('Success:', response));
   }
 
   render(){
