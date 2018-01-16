@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 class CakeSubmit extends Component {
   constructor () {
@@ -26,6 +26,8 @@ class CakeSubmit extends Component {
     // }).then(res => res.json())
     // .catch(error => console.error('Error:', error))
     // .then(response => console.log('Success:', response));
+
+
   }
 
   render(){
@@ -49,6 +51,7 @@ class CakeSubmit extends Component {
             <button type="submit" id="cake-submit-btn">Submit</button>
           </div>
         </form>
+        <Link to="/"><button>Return to Cakes</button></Link>
       </div>
     )
   }
