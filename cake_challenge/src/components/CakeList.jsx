@@ -38,7 +38,7 @@ class CakeList extends Component {
       return(<Cake cake={cake}/>)
     }))
 
-    return <div id="cakes-div">{cakes}<SubmitBtn/></div>
+    return <div id="cakes-div">{cakes}<SubmitBtn cakes={cakes}/></div>
   }
 }
 
